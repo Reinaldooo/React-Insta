@@ -1,19 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import './Loading.scss';
+import "./Loading.scss";
 
 const Loading = () => (
-  <div className="loading">
-    <div className='preloader'>
-      <span />
-      <span />
-      <span />
-      <span />
-      <span />
-      <span />
+  <div className="loader-container" data-testid="loading">
+    <div class="lds-ripple">
+      <div></div>
     </div>
-
-    Carregando
   </div>
 );
 
