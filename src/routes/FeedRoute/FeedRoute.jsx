@@ -34,14 +34,16 @@ const FeedRoute = () => {
 
   return (
     <div data-testid="feed-route">
-      {users ? (
-        <>
-          <Stories stories={stories} getUserById={getUserById} />
-          <Posts posts={posts} getUserById={getUserById} />
-        </>
-      ) : (
-        <Loading />
-      )}
+      {
+        users ? (
+          <>
+            <Stories stories={stories} getUserById={getUserById} />
+            <Posts posts={posts} getUserById={getUserById} />
+          </>
+        ) : (
+          <Loading />
+        )
+      }
     </div>
   );
 };
