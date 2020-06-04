@@ -1,0 +1,13 @@
+.fas.fa-heart {
+  color: #ED2168;
+}
+
+.fas {
+  animation: bubble .5s;
+}
+
+@keyframes bubble {     
+  50% {
+      transform: scale(1.2);
+  }
+}

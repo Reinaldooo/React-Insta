@@ -4,10 +4,9 @@
   padding: 16px;
   position: relative;
   width: 100%;
-}
 
-@media screen and (min-width: 728px) {
-  .feed {
+  @media screen and (max-width: 728px) {
     padding: 16px 0;
   }
 }
+

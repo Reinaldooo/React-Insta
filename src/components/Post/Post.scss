@@ -1,5 +1,4 @@
 .post {
-  background-color: #08111E;
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
@@ -21,18 +20,8 @@
 .post__header .user__thumb {
   height: 40px;
   margin-right: 8px;
-  border: 1px solid #FF991C;
+	border: 2px solid rgba(255,255,255,.2);
   width: 40px;
-}
-
-.follow-btn {
-  color: #858D93;
-  font-weight: 600;
-  font-size: 1.2rem;
-
-  &.is-following {
-    color: #ED2168;
-  }
 }
 
 .post__header .user__name {
@@ -47,58 +36,71 @@
 }
 
 .post__figure {
-  border-radius: 30px;
+  border-radius: 10px;
   height: auto;
   margin: 0;
   overflow: hidden;
   width: 100%;
+  @media screen and (max-width: 728px) {
+    border-radius: 0;
+  }
 }
 
 .post__figure img {
   width: 100%;
 }
 
-.post__controls {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 4px 0;
+.post {
+	background-color: #101010;
+	border-radius: 10px;
+	border: 2px solid rgba(255,255,255,.05);
+	margin-bottom: 2em;
+	color: #fafafa;
 }
 
-.post__control {
-  color: #858D93;
-  font-size: 2.4rem;
-  margin-right: 5px;
-  position: relative;
+.post__info {
+	padding: .4em 1.2em;
 }
 
-.fas.fa-heart {
-  color: #ED2168;
+.post__info div {
+  padding: .4em 0;
 }
 
-.post__status {
-  display: flex;
-  padding: 0;
-  line-height: 1.4em;
-
-  span {
-    color: #858D93;
-  }
+.post__buttons {
+  cursor: pointer;
+	display: flex;
+	justify-content: space-between;
 }
 
-.post__status .user {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.post__buttons__left {
+	width: 100px;
+	display: flex;
+	justify-content: space-between;
 }
 
-.post__status .user span {
-  font-size: 1.2rem;
+.post__buttons__left button {
+  // only for the like button
+	padding: 0;
 }
 
-.post__status .user__thumb {
-  height: 30px;
-  width: 30px;
-  margin-right: 8px;
+.post__button {
+	font-size: 20px;
+}
+
+.post__likes {
+	font-size: 14px;
+}
+
+.post__description {
+	font-size: 14px;
+}
+
+.post__comments {
+  font-size: 14px;
+  opacity: .5;
+}
+
+.post__timestamp {
+  font-size: 10px;
+  margin-bottom: 10px;
 }

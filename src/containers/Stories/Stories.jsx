@@ -24,7 +24,6 @@ const Stories = ({ stories, getUserById }) => {
           {
             stories.map((story, index) => {
               const user = getUserById(story.userId);
-              console.log(user)
               return (
                 <div key={story.id} className="stories__story">
                 <button                  
