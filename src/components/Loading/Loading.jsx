@@ -4,7 +4,7 @@ import "./Loading.scss";
 
 const Loading = () => (
   <div className="loader-container" data-testid="loading">
-    <div class="lds-ripple">
+    <div className="lds-ripple">
       <div></div>
     </div>
   </div>
