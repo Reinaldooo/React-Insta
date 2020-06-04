@@ -1,5 +1,5 @@
 .stories {
-  background-color: #16202B;
+  background-color: #000;
   overflow-x: hidden;
   overflow-y: auto;
   padding: 16px;
@@ -23,9 +23,20 @@
   margin: 0 5px;
   padding: 0;
   width: 72px;
+  color: #fff;
 }
 
 .stories .user__thumb__wrapper {
   height: 65px;
   width: 65px;
 }
+
+.stories__story {
+  text-align: center;
+}
+
+.stories__story span {
+  font-weight: bold;
+}
+
+

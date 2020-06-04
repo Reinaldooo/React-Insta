@@ -1,5 +1,5 @@
 .story {
-  background-color: #08111E;
+  background-color: #000;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -35,8 +35,12 @@
 }
 
 .story__close {
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   color: #858d93;
+}
+
+.story__close i:hover{
+  color: #fff;
 }
 
 .story__header .user {
@@ -59,12 +63,12 @@
 }
 
 .story__video__wrapper {
-  background-color: black;
+  background-color: #1a1a1a;
+	border-radius: 10px;
+	border: 2px solid rgba(255,255,255,.05);
   height: calc(100vh - 104px);
   overflow: hidden;
-  border: 5px solid #16202b;
   padding: 0;
-  border-radius: 30px;
   position: relative;
   width: 100%;
   margin: 16px 0;
