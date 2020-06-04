@@ -8,18 +8,10 @@ import UsersRoute from "./UsersRoute";
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/">
-      <FeedRoute />
-    </Route>
-    <Route exact path="/users">
-      <UsersRoute />
-    </Route>
-    <Route path="/users/:username">
-      <ProfileRoute />
-    </Route>
-    <Route path="/newuser">
-      <NewUserRoute />
-    </Route>
+    <Route exact path="/" component={FeedRoute}/>
+    <Route exact path="/users" component={UsersRoute}/>
+    <Route path="/users/:username" component={ProfileRoute}/>
+    <Route path="/newuser" component={NewUserRoute}/>
     {/* 404 page */}
     <Route
       render={() => (

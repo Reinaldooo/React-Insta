@@ -15,4 +15,9 @@ export const shufflePosts = (arrPosts) => {
     })
   }
   return shuffled
-} 
+}
+
+export const validAvatar = (avatar) => {
+  if(!avatar) return false;
+  return avatar.endsWith(".jpg") || avatar.endsWith(".png")
+}
