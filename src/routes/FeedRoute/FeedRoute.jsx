@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./FeedRoute.scss";
 //
 import { fetchPosts } from "../../services/api";
-import { randomizePosts } from "../../services/utils";
+import { shufflePosts } from "../../services/utils";
 import Loading from "../../components/Loading";
 import Posts from "../../containers/Posts";
 import Stories from "../../containers/Stories";
@@ -24,8 +24,8 @@ const FeedRoute = () => {
     );
     fetchPosts().then(({ users, posts }) => {
       // The fake api results are ordered by user, so i created this function
-      // to "randomize" them making it more realistic
-      posts = randomizePosts(posts);
+      // to "shuffle" them making it more realistic
+      posts = shufflePosts(posts);
       setStories(stories);
       setUsers(users);
       setPosts(posts);
