@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Post.scss";
 //
 import LikeButton from "../LikeButton"
 
 const Post = ({ post, user, idx }) => {
-  const { comments, imageUrl } = post;
+  // const { comments, imageUrl } = post;
+  let comments;
+  let imageUrl;
+  if(post) {
+    comments = post.comments
+    imageUrl = post.imageUrl
+  }
+
   const genLikes = () => (Math.random()*20).toFixed()
 
   return (
@@ -40,13 +47,13 @@ const Post = ({ post, user, idx }) => {
             </div>
           </div>
           <div className="post__likes">
-            Liked by <strong>{post.comments[0].name}</strong> and <strong>{genLikes()} others</strong>
+            Liked by <strong>{comments[0].name}</strong> and <strong>{genLikes()} others</strong>
           </div>
           <div className="post__description">
-            <strong>{user.username}</strong> {post.comments[0].comment}
+            <strong>{user.username}</strong> {comments[0].comment}
           </div>
           <div className="post__comments">
-            View all {post.comments.length} comments
+            View all {comments.length} comments
           </div>
           <div className="post__timestamp">8 hours ago</div>
         </div>
