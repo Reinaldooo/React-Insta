@@ -13,7 +13,7 @@ const Post = ({ post, user, idx }) => {
     imageUrl = post.imageUrl
   }
 
-  const genLikes = () => (Math.random()*20).toFixed()
+  const genRandom = () => (Math.random() * 20 + 2).toFixed()
 
   return (
     <article className="post" data-testid="post">
@@ -47,7 +47,7 @@ const Post = ({ post, user, idx }) => {
             </div>
           </div>
           <div className="post__likes">
-            Liked by <strong>{comments[0].name}</strong> and <strong>{genLikes()} others</strong>
+            Liked by <strong>{comments[0].name}</strong> and <strong>{genRandom()} others</strong>
           </div>
           <div className="post__description">
             <strong>{user.username}</strong> {comments[0].comment}
@@ -55,7 +55,7 @@ const Post = ({ post, user, idx }) => {
           <div className="post__comments">
             View all {comments.length} comments
           </div>
-          <div className="post__timestamp">8 hours ago</div>
+          <div className="post__timestamp">{genRandom()} hours ago</div>
         </div>
       )}
     </article>
