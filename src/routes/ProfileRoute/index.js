@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 //
+import { validAvatar } from "../../services/utils"
 import UserProfile from '../../containers/UserProfile';
 import UserPosts from '../../containers/UserPosts';
 import Loading from '../../components/Loading';
-import { validAvatar } from "../../services/utils"
 
-const ProfileRoute = ({ match }) => {
+function ProfileRoute({ match }) {
   const [user, setUser] = useState({});
   const [userPosts, setUserPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);

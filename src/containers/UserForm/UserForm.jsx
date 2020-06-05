@@ -1,52 +1,51 @@
-import React, { useState } from 'react';
-import './UserForm.scss';
+import React, { useState } from "react";
 //
-import { validAvatar } from "../../services/utils"
-import SuccessMessage from '../../components/SuccessMessage';
+import "./UserForm.scss";
+import { validAvatar } from "../../services/utils";
+import SuccessMessage from "../../components/SuccessMessage";
 
 const UserForm = () => {
-  const [name, setName] = useState('');
-  const [avatar, setAvatar] = useState('');
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [submit, setSubmit] = useState(false);
+  const [name, setName] = useState("");
+  const [avatar, setAvatar] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [success, setSuccess] = useState(false);
 
-  const handleSetName = (event) => {
+  const handleInput = (event, field) => {
     const { value } = event.target;
-    setName(value);
+    var options = {
+      name() {
+        setName(value);
+      },
+      avatar() {
+        setAvatar(value);
+      },
+      username() {
+        setUsername(value);
+      },
+      email() {
+        setEmail(value);
+      },
+    };
+    options[field]();
   };
 
-  const handleSetAvatar = (event) => {
-    const { value } = event.target;
-    setAvatar(value);
-  };
-
-  const handleSetUserName = (event) => {
-    const { value } = event.target;
-    setUsername(value);
-  };
-
-  const handleSetEmail = (event) => {
-    const { value } = event.target;
-    setEmail(value);
-  };
-
-  const handleAddUser = (event) => {
-    event.preventDefault();
+  const handleAddUser = (e) => {
+    e.preventDefault();
     const newUser = JSON.stringify({
       name,
       avatar,
       username,
       email,
     });
-
-    fetch('https://5e7d0266a917d70016684219.mockapi.io/api/v1/users', {
-      method: 'POST',
+    fetch("https://5e7d0266a917d70016684219.mockapi.io/api/v1/users", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: newUser
-    }).then(() => setSubmit(true));
+      body: newUser,
+      // This is hardcoded because the fakiApi don't accept new users anymore
+    }).then(() => setSuccess(true));
   };
 
   return (
@@ -56,18 +55,25 @@ const UserForm = () => {
           <div className="profile-data">
             <div className="user">
               <div className="user__thumb">
-                {validAvatar(avatar)
-                  ? <img src={avatar} alt="" />
-                  : <img src="https://viniciusvinna.netlify.app/assets/api-instagram/profiles/profile-placeholder.png" alt="" />
+                {
+                  validAvatar(avatar)
+                    ? 
+                    <img src={avatar} alt="" />
+                    : 
+                    <img
+                      src="https://viniciusvinna.netlify.app/assets/api-instagram/profiles/profile-placeholder.png"
+                      alt=""
+                    />
                 }
               </div>
 
-              {name && (
-                <p className="user__name">
-                  {name}
-                  <span>@{username}</span>
-                </p>
-              )}
+              {
+                name && 
+                  <p className="user__name">
+                    {name}
+                    <span>@{username}</span>
+                  </p>                
+              }
             </div>
           </div>
         </div>
@@ -81,7 +87,7 @@ const UserForm = () => {
               type="text"
               value={name}
               placeholder="Seu nome"
-              onChange={(event) => handleSetName(event)}
+              onChange={(event) => handleInput(event, "name")}
             />
 
             <label>Usuário</label>
@@ -89,7 +95,7 @@ const UserForm = () => {
               type="text"
               value={username}
               placeholder="@usuario"
-              onChange={(event) => handleSetUserName(event)}
+              onChange={(event) => handleInput(event, "username")}
             />
 
             <label>Email</label>
@@ -97,27 +103,24 @@ const UserForm = () => {
               type="email"
               value={email}
               placeholder="email@provedor.com"
-              onChange={(event) => handleSetEmail(event)}
+              onChange={(event) => handleInput(event, "email")}
             />
 
-            <label>Url da Imagem de Perfil (use a url da imagem do Linkedin)</label>
+            <label>Url da Imagem de Perfil</label>
             <input
               type="text"
               placeholder="http://..."
-              onChange={(event) => handleSetAvatar(event)}
+              onChange={(event) => handleInput(event, "avatar")}
             />
 
-            <button
-              type="button"
-              onClick={(event) => handleAddUser(event)}
-            >
+            <button type="button" onClick={handleAddUser}>
               Cadastrar
             </button>
           </div>
         </div>
       </section>
 
-      {submit && (<SuccessMessage />)}
+      {success && <SuccessMessage />}
     </React.Fragment>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./FeedRoute.scss";
+import "./styles.scss";
 //
 import { fetchPosts } from "../../services/api";
 import { shufflePosts } from "../../services/utils";
@@ -7,7 +7,7 @@ import Loading from "../../components/Loading";
 import Posts from "../../containers/Posts";
 import Stories from "../../containers/Stories";
 
-const FeedRoute = () => {
+function FeedRoute() {
   const [users, setUsers] = useState(null);
   const [posts, setPosts] = useState([]);
   const [stories, setStories] = useState([]);

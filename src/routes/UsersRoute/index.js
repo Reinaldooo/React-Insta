@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import UsersList from '../../components/UsersList/UsersList';
 import Loading from '../../components/Loading/Loading';
 
-const UsersRoute = () => {
+function UsersRoute() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
