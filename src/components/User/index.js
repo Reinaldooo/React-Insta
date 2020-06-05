@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const User = ({ user })  => {
-  const {avatar, name, username } = user;
-
+const User = ({ data })  => {
+  const {avatar, name, username } = data;
   return (
     <article className="post" data-testid="user">
       <header className="post__header">
@@ -13,7 +12,7 @@ const User = ({ user })  => {
           </div>
 
           <div className="user__name">
-            {name.length > 20 ? name.substring(0,20)+"..." : name}
+            {name && name.length > 20 ? name.substring(0,20)+"..." : name}
           </div>
         </Link>
       </header>

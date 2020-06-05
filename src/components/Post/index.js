@@ -4,14 +4,8 @@ import { Link } from "react-router-dom";
 import "./styles.scss";
 import LikeButton from "../LikeButton"
 
-function Post({ post, user, idx }) {
-  // const { comments, imageUrl } = post;
-  let comments;
-  let imageUrl;
-  if(post) {
-    comments = post.comments
-    imageUrl = post.imageUrl
-  }
+function Post({ data, user, idx }) {
+  const { comments, imageUrl } = data;
 
   const genRandom = () => (Math.random() * 20 + 2).toFixed()
 

@@ -10,7 +10,7 @@ function UserPosts({ posts }) {
         { posts.length > 0
           ? posts.map((post) => (
             <Post
-              post={post}
+              data={post}
               key={post.id}
             />
           ))

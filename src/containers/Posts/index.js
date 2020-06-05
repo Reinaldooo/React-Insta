@@ -8,7 +8,7 @@ export default function Posts({ posts, getUserById }) {
       <section className="feed">
         { posts.length && posts.map((post, idx) => (
             <Post
-              post={post}
+              data={post}
               user={getUserById(post.userId)}
               key={post.id}
               idx={idx}
