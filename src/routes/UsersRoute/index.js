@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 //
-import UsersList from '../../components/UsersList/UsersList';
-import Loading from '../../components/Loading/Loading';
+import UsersList from '../../components/UsersList';
+import Loading from '../../components/Loading';
 
 function UsersRoute() {
   const [users, setUsers] = useState([]);

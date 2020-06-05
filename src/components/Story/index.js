@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from "react";
-import './Story.scss';
 import { Link } from 'react-router-dom';
+//
+import './styles.scss';
 
-
-const Story = ({ story, user, handleClose }) => {
+function Story({ story, user, handleClose }) {
   const [metadata, setMetadata] = useState(null);
   const [currentTime, setCurrentTime] = useState(null);
 

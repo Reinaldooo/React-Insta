@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="12" failures="0" time="2.018">
-  <testsuite name="React Instagram APP" errors="0" failures="0" skipped="0" timestamp="2020-06-05T14:45:49" time="1.53" tests="12">
+<testsuites name="jest tests" tests="12" failures="0" time="2.311">
+  <testsuite name="React Instagram APP" errors="0" failures="0" skipped="0" timestamp="2020-06-05T14:59:03" time="1.747" tests="12">
     <testcase classname="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;Loading&gt; component" name="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;Loading&gt; component" time="0.023">
     </testcase>
     <testcase classname="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;Post&gt; component" name="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;Post&gt; component" time="0.01">
@@ -9,11 +9,11 @@
     </testcase>
     <testcase classname="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;SuccessMessage&gt; component" name="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;SuccessMessage&gt; component" time="0.006">
     </testcase>
-    <testcase classname="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;Topbar&gt; component" name="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;Topbar&gt; component" time="0.005">
+    <testcase classname="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;Topbar&gt; component" name="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;Topbar&gt; component" time="0.004">
     </testcase>
-    <testcase classname="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;User&gt; component" name="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;User&gt; component" time="0.002">
+    <testcase classname="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;User&gt; component" name="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;User&gt; component" time="0.003">
     </testcase>
-    <testcase classname="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;App&gt; component" name="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;App&gt; component" time="0.034">
+    <testcase classname="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;App&gt; component" name="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;App&gt; component" time="0.033">
     </testcase>
     <testcase classname="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;Posts&gt; component" name="React Instagram APP Folder Strucutre and data-test-id attributes should should render properly the &lt;Posts&gt; component" time="0.002">
     </testcase>

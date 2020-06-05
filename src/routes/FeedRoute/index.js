@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./styles.scss";
 //
+import "./styles.scss";
 import { fetchPosts } from "../../services/api";
 import { shufflePosts } from "../../services/utils";
 import Loading from "../../components/Loading";

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "./LikeButton.scss";
+//
+import "./styles.scss";
 
-const LikeButton = ({ idx }) => {
+function LikeButton({ idx }) {
   // First post will be liked just for aesthetic reasons
   const [liked, setLiked] = useState(idx === 0 ? true : false);
 

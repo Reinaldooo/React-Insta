@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 //
-import "./UserForm.scss";
+import "./styles.scss";
 import { validAvatar } from "../../services/utils";
 import SuccessMessage from "../../components/SuccessMessage";
 
-const UserForm = () => {
+function UserForm() {
   const [name, setName] = useState("");
   const [avatar, setAvatar] = useState("");
   const [username, setUsername] = useState("");

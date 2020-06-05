@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Post.scss";
 //
+import "./styles.scss";
 import LikeButton from "../LikeButton"
 
-const Post = ({ post, user, idx }) => {
+function Post({ post, user, idx }) {
   // const { comments, imageUrl } = post;
   let comments;
   let imageUrl;

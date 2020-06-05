@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import './Stories.scss';
 //
+import './styles.scss';
 import Story from '../../components/Story';
 
-const Stories = ({ stories, getUserById }) => {
+function Stories({ stories, getUserById }) {
   const [showStory, setShowStory] = useState(false);
   const [currentStory, setCurrentStory] = useState({});
   const [selectedUser, setSelectedUser] = useState({});

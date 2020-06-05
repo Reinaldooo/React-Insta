@@ -1,8 +1,8 @@
 import React from 'react';
+//
+import './styles.scss';
 
-import './UserProfile.scss';
-
-const UserProfile = ({ avatar, name, username }) => {
+function UserProfile({ avatar, name, username }) {
   return (
     <section className="profile" data-testid="user-profile">
       <div className="container">
